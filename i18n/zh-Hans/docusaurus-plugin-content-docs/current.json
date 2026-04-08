@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "下一步",
+    "description": "The label for version current"
+  },
+  "sidebar.product.category.Product": {
+    "message": "产品",
+    "description": "The label for category Product in sidebar product"
+  },
+  "sidebar.solution.category.Solution": {
+    "message": "解决方案",
+    "description": "The label for category Solution in sidebar solution"
+  },
+  "sidebar.download.category.Download": {
+    "message": "下载",
+    "description": "The label for category Download in sidebar download"
+  },
+  "sidebar.docs.category.Documentation": {
+    "message": "文档",
+    "description": "The label for category Documentation in sidebar docs"
+  },
+  "sidebar.pricing.category.Pricing": {
+    "message": "定价",
+    "description": "The label for category Pricing in sidebar pricing"
+  },
+  "sidebar.about.category.About": {
+    "message": "关于",
+    "description": "The label for category About in sidebar about"
+  }
+}

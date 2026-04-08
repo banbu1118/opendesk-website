@@ -1,0 +1,66 @@
+---
+slug: /
+hide_table_of_contents: true
+layout: null
+title: OpenDesk
+hide_title: true
+---
+
+import { Card, CardGrid, Feature } from '@site/src/components/ui';
+
+<div style={{textAlign: 'center', padding: '0.5rem 0 0.2rem'}}>
+  <div style={{ fontSize: '2.6rem', marginBottom: '0.5rem',fontWeight: 'bold' }}>
+    OpenDesk - Open Source VDI Management Platform
+  </div>
+  <div style={{ fontSize: '1.2rem', opacity: 0.75, marginBottom: '0.2rem' }}>
+    Simple · Efficient · Open Source · Making Desktop Cloud Accessible
+  </div>
+</div>
+
+<h2 style={{ marginTop: '0' }}>✨ Product Introduction</h2>
+
+<Card>
+OpenDesk is an open source VDI management platform built on <strong>Proxmox VE (PVE)</strong>.
+
+Through a unified web console, it enables virtual desktop lifecycle management, resource scheduling, and access control.
+
+Users access desktops through <strong>RDP + RDPGW gateway</strong> for a secure, efficient, and scalable desktop cloud experience.
+</Card>
+
+---
+
+## ⚡ Core Capabilities
+
+<a id="features"></a>
+
+<CardGrid>
+
+<Feature title="🖥️ Virtual Machine Management" desc="Unified VM lifecycle management based on PVE API, supporting creation / start/stop / allocation / recycling" />
+
+<Feature title="🔐 Secure Access" desc="Unified RDPGW entry with session isolation, permission control, and access auditing" />
+
+<Feature title="⚡ High Performance Scheduling" desc="Low-latency connection experience with GPU acceleration and dynamic resource allocation" />
+
+<Feature title="📊 Operational Visualization" desc="VM status monitoring, user session management, resource usage statistics" />
+
+</CardGrid>
+
+---
+
+## 🧱 System Architecture
+
+<a id="architecture"></a>
+
+<CardGrid>
+
+<Feature title="PVE Virtualization Layer" desc="High-performance virtualization foundation based on KVM, providing stable resource pool" />
+
+<Feature title="OpenDesk Management Layer" desc="Unified scheduling and API management center, responsible for full lifecycle management of virtual desktops" />
+
+<Feature title="RDPGW Gateway Layer" desc="Provides unified access, traffic forwarding, secure authentication, and session control" />
+
+<Feature title="RDP Client" desc="Standard remote desktop protocol access, compatible with multi-platform thin clients" />
+
+</CardGrid>
+
+---

@@ -1,0 +1,66 @@
+---
+slug: /
+hide_table_of_contents: true
+layout: null
+title: OpenDesk
+hide_title: true
+---
+
+import { Card, CardGrid, Feature } from '@site/src/components/ui';
+
+<div style={{textAlign: 'center', padding: '0.5rem 0 0.2rem'}}>
+  <div style={{ fontSize: '2.6rem', marginBottom: '0.5rem',fontWeight: 'bold' }}>
+    OpenDesk 基于 PVE 的开源 VDI 管理平台
+  </div>
+  <div style={{ fontSize: '1.2rem', opacity: 0.75, marginBottom: '0.2rem' }}>
+    简单 · 高效 · 开源 · 让桌面云触手可及
+  </div>
+</div>
+
+<h2 style={{ marginTop: '0' }}>✨ 产品简介</h2>
+
+<Card>
+OpenDesk 是一个基于 **Proxmox VE（PVE）** 构建的开源 VDI 管理平台。
+
+通过统一的 Web 控制台，实现虚拟桌面生命周期管理、资源调度与访问控制。
+
+用户通过 **RDP + RDPGW 网关** 访问桌面，实现安全、高效、可扩展的桌面云体验。
+</Card>
+
+---
+
+## ⚡ 核心能力
+
+<a id="features"></a>
+
+<CardGrid>
+
+<Feature title="🖥️ 虚拟机管理" desc="基于 PVE API 的统一虚拟机生命周期管理，支持创建 / 启停 / 分配 / 回收" />
+
+<Feature title="🔐 安全访问" desc="RDPGW 统一入口，支持会话隔离、权限控制与访问审计" />
+
+<Feature title="⚡ 高性能调度" desc="低延迟连接体验，支持 GPU 加速与资源动态分配" />
+
+<Feature title="📊 运维可视化" desc="虚拟机状态监控、用户会话管理、资源使用统计" />
+
+</CardGrid>
+
+---
+
+## 🧱 系统架构
+
+<a id="architecture"></a>
+
+<CardGrid>
+
+<Feature title="PVE 虚拟化层" desc="基于 KVM 的高性能虚拟化底座，提供稳定资源池" />
+
+<Feature title="OpenDesk 管理层" desc="统一调度与 API 管理中心，负责虚拟桌面全生命周期管理" />
+
+<Feature title="RDPGW 网关层" desc="提供统一接入、流量转发、安全认证与会话控制" />
+
+<Feature title="RDP 客户端" desc="标准远程桌面协议接入，兼容多平台瘦客户端" />
+
+</CardGrid>
+
+---
