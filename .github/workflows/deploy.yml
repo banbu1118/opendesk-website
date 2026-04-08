@@ -33,6 +33,8 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: build
+    env:
+      DEPLOY_TARGET: github
 
     # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
