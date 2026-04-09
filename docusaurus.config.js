@@ -101,7 +101,7 @@ const config = {
           { to: '/about', label: 'About', position: 'left' },
           { type: 'localeDropdown', position: 'right' },
           {
-            href: 'https://github.com/banbu1118/opendesk-website',
+            href: 'https://github.com/banbu1118/OpenDesk',
             label: 'GitHub',
             position: 'right',
           },
