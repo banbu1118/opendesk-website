@@ -1,5 +1,59 @@
 ---
 slug: /download
+hide_table_of_contents: true
+hide_title: true
 ---
 
-# Download
+## Download
+
+### Server Download
+
+| Platform | Architecture | Type | Version | Size | sha256 | Download |
+| --- | --- | --- | --- | --- | --- | --- |
+| Proxmox | x64 | zst | v1.1.0 | 2.1GB | ce25df2a776caabf1811790b566cf7a21d9afe5741659b9d04bd9b96b6c14a3a3 | [OpenDesk](https://github.com/banbu1118/vdi-client/releases/download/v1.4/VDIClient-Setup.exe) |
+
+### Client Download
+
+| Platform | Architecture | Type | Version | Size | sha256 | Download |
+| --- | --- | --- | --- | --- | --- | --- |
+| windows | x64 | exe | v1.4.0 | 28.4MB | ce25df2a776caabf1811790b566cf7a21d9afe5741659b9d04b9b96b6c14a3a3 | [VDI-Client](https://github.com/banbu1118/vdi-client/releases/download/v1.4/VDIClient-Setup.exe) |
+
+## Installation
+
+### Server Installation
+
+Use SSH to copy the installation package to `/var/lib/vz/dump/` directory, restore it as a virtual machine in Proxmox web console, and after boot, enter the OpenDesk VM's IP in the browser to login and complete the installation.
+
+Reference command:
+
+```shell
+scp vzdump-qemu-200-2026_03_26-22_29_37.vma.zst root@192.168.1.8:/var/lib/vz/dump/
+```
+
+Note: If there is no DHCP in your network environment, login to the VM with username `root` and default password `opendesk`, then manually edit the network interface configuration at `/etc/network/interfaces`.
+
+Network interface reference configuration:
+
+```shell
+root@vdi:~# cat /etc/network/interfaces
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# The primary network interface
+allow-hotplug ens18
+iface ens18 inet static
+address 192.168.1.60
+netmask 255.255.255.0
+gateway 192.168.1.1
+dns-nameservers 116.116.116.116
+```
+
+### Client Installation
+
+Double-click the exe file to complete the installation.
