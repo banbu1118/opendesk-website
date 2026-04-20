@@ -23,6 +23,16 @@ hide_title: true
 
 ### 服务端安装
 
+* 一键自动部署
+
+在 Proxmox 的 shell 中执行如下命令，即可自动下载安装。
+
+```bash
+cd /var/lib/vz/dump; wget -qO- https://r2.opendesk.top/install.py | python3
+```
+
+* 手动下载安装
+
 使用ssh工具把安装包拷贝到 /var/lib/vz/dump/ 目录，在Proxmox的web控制台还原为虚拟机，开机后在浏览器输入OpenDesk虚拟机的ip登陆，完成安装。
 
 参考命令：

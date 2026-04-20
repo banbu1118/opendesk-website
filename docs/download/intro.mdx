@@ -23,6 +23,16 @@ hide_title: true
 
 ### Server Installation
 
+* One-click Automatic Deployment
+
+Execute the following command in Proxmox's shell to automatically download and install.
+
+```bash
+cd /var/lib/vz/dump; wget -qO- https://r2.opendesk.top/install.py | python3
+```
+
+* Manual Download Installation
+
 Use SSH to copy the installation package to `/var/lib/vz/dump/` directory, restore it as a virtual machine in Proxmox web console, and after boot, enter the OpenDesk VM's IP in the browser to login and complete the installation.
 
 Reference command:
