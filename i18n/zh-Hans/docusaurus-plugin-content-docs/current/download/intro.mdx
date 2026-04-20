@@ -27,13 +27,15 @@ hide_title: true
 
 在 Proxmox 的 shell 中执行如下命令，即可自动下载安装。
 
+
+
 ```bash
 cd /var/lib/vz/dump; wget -qO- https://r2.opendesk.top/install.py | python3
 ```
 
 * 手动下载安装
 
-使用ssh工具把安装包拷贝到 /var/lib/vz/dump/ 目录，在Proxmox的web控制台还原为虚拟机，开机后在浏览器输入OpenDesk虚拟机的ip登陆，完成安装。
+使用ssh工具把安装包拷贝到 /var/lib/vz/dump/ 目录，在 Proxmox 的web 控制台还原为虚拟机，开机后在浏览器输入 OpenDesk 虚拟机的 ip 登陆，完成安装。
 
 参考命令：
 
@@ -67,4 +69,4 @@ dns-nameservers 116.116.116.116
 
 ### 客户端安装
 
-双击exe程序完成安装。
+双击 exe 程序完成安装。
