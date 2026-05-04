@@ -20,6 +20,7 @@ Based on:
 - RDP Protocol
 - Freerdp
 - RDPGW Open Source Gateway
+- RDPGW Gateway
 
 Building a:
 
@@ -53,7 +54,7 @@ OpenDesk adopts a "data centralization + zero data on terminal" design concept, 
 * 🚫 **Zero Data on Terminal**: No core business files saved on employee local devices
 * 🧱 **Virtual Machine Isolation**: Each user has independent desktop environment, isolated from others
 * 📊 **User Access Policies**: Independent access policies configured for each virtual machine desktop
-* 🌐 **Unified Entry Access**: All connections through RDPGW gateway for centralized OpenDesk control
+* 🌐 **Unified Entry Access**: All connections through RDPGW + Guacamole for centralized OpenDesk control
 
 👉 Especially suitable for: Finance, HR, customer data and other sensitive data scenarios
 
@@ -64,7 +65,7 @@ OpenDesk adopts a "data centralization + zero data on terminal" design concept, 
 OpenDesk natively supports remote work without complex VPN:
 
 * 🌐 Access desktop via client
-* 🔑 Unified access through RDPGW (HTTPS)
+* 🔑 Unified access through RDPGW + Guacamole (HTTPS)
 * 💻 Multi-platform support: Windows / macOS / Linux
 * 🚀 Smooth experience even under weak network (RDP protocol optimization)
 
