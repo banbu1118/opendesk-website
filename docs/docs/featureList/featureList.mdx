@@ -1,0 +1,38 @@
+---
+sidebar_label: Product Feature List
+hide_table_of_contents: false
+sidebar_position: 4
+layout: null
+title: Product Feature List
+hide_title: true
+---
+
+| Feature | mstsc | VDIClient | Implementation Notes |
+| --- | --- | --- | --- |
+| RDP Basic Connection | ✅ | ✅ | Full integration of the libfreerdp library |
+| Smartcard | ✅ | ❌ |  |
+| WebAuthn | ✅ | ❌ |  |
+| Drive Redirection | ✅ | ✅ | Windows redirects all drives by default; mac and linux redirect the home directory by default |
+| USB Redirection | ❌ | ✅ | Not supported on mac |
+| Camera Redirection | ✅ | ✅ |  |
+| Printer Redirection | ✅ | ❌ |  |
+| Paste Text | ✅ | ✅ |  |
+| Clipboard Image | ✅ | ✅ |  |
+| Clipboard File | ✅ | ✅ |  |
+| Multi-monitor | ✅ | ❌ |  |
+| Window Smart Resolution | ❌ | ✅ | RDP resolution auto-syncs after window resize |
+| Window Scaling (Smart Sizing) | ✅ | ❌ | VDIClient always defaults to 100% scaling |
+| Fullscreen Mode | ✅ | ✅ | Fullscreen by default + toggle button to exit/enter |
+| Toolbar | ✅ | ✅ | Top-center hotspot + 3s auto-hide + pin to fix + CAD/USB/Fullscreen/Minimize buttons |
+| Font Smoothing (ClearType) | ✅ | ✅ | Explicitly enabled |
+| Touch / Multi-touch | ✅ | ❌ |  |
+| Microphone Input | ✅ | ✅ |  |
+| Audio Output | ✅ | ✅ |  |
+| RemoteFX Codec | ✅ | ✅ |  |
+| AVC444/H.264 Decoding | ✅ | ✅ |  |
+| Bitmap Cache | ✅ | ✅ |  |
+| Network Auto Optimization | ✅ | ✅ |  |
+| Data Compression | ✅ | ✅ | Explicitly enabled |
+| Reconnection | ✅ | ✅ | 3 retries |
+
+---
