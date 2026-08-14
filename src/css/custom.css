@@ -37,3 +37,12 @@
   --ifm-background-surface-color: #1e293b;
 
 }
+
+/* 图片点击放大（medium-zoom）层级调整，避免被导航栏遮挡 */
+.medium-zoom-overlay {
+  z-index: 1000;
+}
+
+.medium-zoom-image--opened {
+  z-index: 1001;
+}
