@@ -1,0 +1,80 @@
+---
+sidebar_label: rdg
+hide_table_of_contents: false
+sidebar_position: 6
+layout: null
+title: rdg
+hide_title: true
+---
+
+## Configure Gateway Proxy
+
+### I. Purpose
+
+Allow users to securely connect to remote desktops on the internal network via HTTPS, without exposing RDP port 3389 directly to the public network.
+
+### II. Network Diagram
+
+![](./images/1.png)
+
+OpenDesk: 192.168.1.60
+
+Firewall: 192.168.1.71
+
+Domain: vdi.com (a public IP works the same way)
+
+| VDI Component | IP / Domain |
+| -------------------- | ------------ |
+| OpenDesk | 192.168.1.60 |
+| Firewall | 192.168.1.71 |
+| Domain (a public IP works the same way) | vdi.com |
+
+### III. Internal Gateway Proxy
+
+OpenDesk uses the internal gateway to connect to virtual machines by default, and administrators can also customize the gateway proxy. If the user's office network is isolated from the virtual machine network, configuring the internal gateway enables secure access.
+
+Note: If using nginx as the proxy, please use nginx-full stream mode for the gateway proxy ports.
+
+#### Disable Direct Connection
+
+Disable direct connection in user management.
+
+#### TCP Port Forwarding
+
+| OpenDesk | Firewall | Purpose |
+| ----------------- | ----------------- | ---------- |
+| 192.168.1.60:443 | 192.168.1.71:1443 | Client login |
+| 192.168.1.60:8443 | 192.168.1.71:8888 | RDP gateway |
+
+Users can customize the mapped ports; ports 1443 and 8888 on 192.168.1.71 are examples only.
+
+#### Configure Internal Gateway Proxy
+
+Configure the internal gateway proxy in System Settings: IP 192.168.1.71, port 8888.
+
+#### Client Login
+
+Set the login server in the client to 192.168.1.71:1443 to connect to the virtual machines.
+
+### IV. Public Gateway Proxy
+
+#### Enable Public Gateway
+
+Enable the public gateway in user management.
+
+#### TCP Port Forwarding
+
+| OpenDesk | Firewall | Purpose |
+| ----------------- | ------------ | ---------- |
+| 192.168.1.60:443 | vdi.com:2443 | Client login |
+| 192.168.1.60:9443 | vdi.com:9999 | RDP gateway |
+
+Users can customize the mapped ports; ports 2443 and 9999 on vdi.com are examples only.
+
+#### Configure Public Gateway Proxy
+
+Configure the public gateway proxy in System Settings: IP vdi.com, port 9999.
+
+#### Client Login
+
+Set the login server in the client to vdi.com:2443 to connect to the virtual machines.
