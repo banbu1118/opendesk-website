@@ -1,9 +1,11 @@
-	{
-		"name": "opendesk-website",
-		// Update to today's date
-		// Set this to today's date
-		"compatibility_date": "2026-11-23",
-		"assets": {
-			"directory": "./build"
-		}
-	}
+    {
+        "name": "opendesk-website",
+        // Update to today's date
+        // Set this to today's date
+        "compatibility_date": "2026-11-23",
+        "assets": {
+            "directory": "./build",
+            "not_found_handling": "404-page",
+            "html_handling": "auto-trailing-slash"
+        }
+    }
