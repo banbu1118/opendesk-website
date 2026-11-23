@@ -1,0 +1,9 @@
+	{
+		"name": "my-docusaurus-app",
+		// Update to today's date
+		// Set this to today's date
+		"compatibility_date": "2026-11-23",
+		"assets": {
+			"directory": "./build"
+		}
+	}
